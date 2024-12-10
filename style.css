@@ -91,8 +91,13 @@ body {
 .apresentacao__conteudo__titulo {
     font-family: var(--fontSecundaria);
     color: var(--corPrincipal);
-    font-weight: 900;
+    font-weight: 500;
     font-size: 2rem;
+}
+
+.apresentacao__conteudo__titulo span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--corPrincipal);
 }
 
 .apresentacao__conteudo__paragrafo {
