@@ -4,6 +4,7 @@
     --corBackground: #1A1A19;
 
     --corPrincipal: #f7f7f7;
+    --corSecundaria: #1d4ed8;
 
     --fontPrincipal: 'Montserrat', sans-serif;
     --fontSecundaria: 'Krona One', sans-serif;
@@ -112,4 +113,62 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 5%;
+}
+
+.formacao {
+    padding: 8rem 10rem;
+}
+
+.formacao__conteudo__titulo {
+    text-align: center;
+    font-family: var(--fontSecundaria);
+    color: var(--corPrincipal);
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+.formacao__conteudo__descricao__titulo,
+.formacao__conteudo__cursos__titulo,
+.formacao__conteudo__idiomas__titulo {
+    font-family: var(--fontSecundaria);
+    color: var(--corPrincipal);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.formacao__conteudo__descricao__paragrafo {
+    margin-top: 1rem;
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    font-size: 1.2rem;
+}
+
+.formacao__conteudo__cursos__cursos li {
+    margin-top: 1rem;
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.formacao__conteudo__cursos__cursos li a {
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.formacao__conteudo__cursos__cursos li a:hover {
+    color: var(--corSecundaria);
+}
+
+.formacao__conteudo__idiomas li {
+    margin-top: 1rem;
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    font-size: 1.2rem;
+    list-style: none;
 }
