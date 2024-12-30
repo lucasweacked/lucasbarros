@@ -26,6 +26,7 @@ fetch('cursos.json')
     console.error('Erro ao carregar os dados:', error);
   });
 
+//Script de scroll inspirado por ASMR Prog (https://www.youtube.com/@AsmrProg)
 function scrollToElement(elementSelector, instance = 0) {
     const elements = document.querySelectorAll(elementSelector);
     if (elements.length > instance) {
