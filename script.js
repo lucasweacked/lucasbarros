@@ -39,7 +39,7 @@ const link2 = document.getElementById("link2");
 const link3 = document.getElementById("link3");
 
 link1.addEventListener('click', () => {
-    scrollToElement('.formacao__conteudo');
+    scrollToElement('.formacao');
 });
 
 link2.addEventListener('click', () => {
