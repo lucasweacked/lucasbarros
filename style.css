@@ -113,6 +113,7 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 5%;
+    pointer-events: none;
 }
 
 .formacao {
@@ -183,7 +184,45 @@ body {
     color: var(--corPrincipal);
     font-weight: 500;
     font-size: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+}
+
+.projetos__conteudo__introducao {
+    text-align: center;
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    font-size: 1.3rem;
+}
+
+.projetos__conteudo__introducao a {
+    text-decoration: none;
+    font-family: var(--fontSecundaria);
+    /* Substitua pela sua fonte, caso não use variáveis */
+    color: #0052cc;
+    font-size: 1.1rem;
+    /* Ajuste conforme necessário */
+    font-weight: 500;
+    position: relative;
+}
+
+.projetos__conteudo__introducao a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #0052cc;
+    transition: width 0.3s ease;
+}
+
+.projetos__conteudo__introducao a:hover::after {
+    width: 100%;
+}
+
+.projetos__conteudo__introducao a:hover {
+    text-decoration: none;
+    text-underline-offset: 0.8rem;
 }
 
 .projetos__conteudo__projetos {
