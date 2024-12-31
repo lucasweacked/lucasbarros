@@ -4,7 +4,7 @@
     --corBackground: #1A1A19;
 
     --corPrincipal: #f7f7f7;
-    --corSecundaria: #1d4ed8;
+    --corSecundaria: #0052cc;
 
     --fontPrincipal: 'Montserrat', sans-serif;
     --fontSecundaria: 'Krona One', sans-serif;
@@ -171,4 +171,44 @@ body {
     color: var(--corPrincipal);
     font-size: 1.2rem;
     list-style: none;
+}
+
+.projetos {
+    padding: 3rem 10rem;
+}
+
+.projetos__conteudo__titulo {
+    text-align: center;
+    font-family: var(--fontSecundaria);
+    color: var(--corPrincipal);
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+.projetos__conteudo__projetos {
+    font-family: var(--fontSecundaria);
+    color: var(--corPrincipal);
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+.projetos__conteudo__projetos__paragrafo,
+.projetos__conteudo__projetos__tecnologias {
+    margin-top: 0.3rem;
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    font-size: 1.2rem;
+}
+
+.projetos__conteudo__projetos__paragrafo a {
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.projetos__conteudo__projetos__paragrafo a:hover {
+    color: var(--corSecundaria);
 }

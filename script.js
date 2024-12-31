@@ -43,7 +43,7 @@ link1.addEventListener('click', () => {
 });
 
 link2.addEventListener('click', () => {
-    scrollToElement('.header', 1);
+    scrollToElement('.projetos');
 });
 
 link3.addEventListener('click', () => {

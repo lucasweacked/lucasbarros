@@ -12,6 +12,10 @@
     "certificado": "https://cursos.alura.com.br/user/lucasweacked21/immersion/certificate/40135"
   },
   {
+    "nome": "Imersão Dev Back-End - Alura Cursos",
+    "certificado": "https://cursos.alura.com.br/user/lucasweacked21/immersion/certificate/49679"
+  },
+  {
     "nome": "C#: Aplicando a Orientação a Objetos - Alura Cursos",
     "certificado": "https://cursos.alura.com.br/user/lucasweacked21/course/csharp-aplicando-orientacao-objetos/certificate"
   },
@@ -42,5 +46,13 @@
   {
     "nome": "Java: criando a sua primeira aplicação - Alura Cursos",
     "certificado": "https://cursos.alura.com.br/user/lucasweacked21/course/java-criando-primeira-aplicacao/certificate"
+  },
+  {
+    "nome": "Git e GitHub: compartilhando e colaborando em projetos - Alura Cursos",
+    "certificado": "https://cursos.alura.com.br/user/lucasweacked21/course/git-github-compartilhando-colaborando-projetos/certificate"
+  },
+  {
+    "nome": "Java: aplicando a Orientação a Objetos - Alura Cursos",
+    "certificado": "https://cursos.alura.com.br/user/lucasweacked21/course/java-aplicando-orientacao-objetos/certificate"
   }
 ]
