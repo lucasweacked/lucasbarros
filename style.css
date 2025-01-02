@@ -197,10 +197,8 @@ body {
 .projetos__conteudo__introducao a {
     text-decoration: none;
     font-family: var(--fontSecundaria);
-    /* Substitua pela sua fonte, caso não use variáveis */
-    color: #0052cc;
+    color: var(--corSecundaria);
     font-size: 1.1rem;
-    /* Ajuste conforme necessário */
     font-weight: 500;
     position: relative;
 }
@@ -212,7 +210,7 @@ body {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background-color: #0052cc;
+    background-color: var(--corSecundaria);
     transition: width 0.3s ease;
 }
 
@@ -250,4 +248,103 @@ body {
 
 .projetos__conteudo__projetos__paragrafo a:hover {
     color: var(--corSecundaria);
+}
+
+.contato {
+    padding: 4% 5%;
+}
+
+.contato__conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contato__conteudo__titulo {
+    text-align: center;
+    font-family: var(--fontSecundaria);
+    color: var(--corPrincipal);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.contato__conteudo__paragrafo {
+    font-family: var(--fontPrincipal);
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--corPrincipal);
+    text-align: center;
+    margin-top: 2.3rem;
+}
+
+.contato__formulario {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0% 10%;
+}
+
+.contato__formulario__linha {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.contato__formulario__grupo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato__formulario__nomes {
+    font-family: var(--fontSecundaria);
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--corPrincipal);
+    margin-bottom: 0.8rem;
+}
+
+.contato__formulario__campos {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--corPrincipal);
+    font-size: 1rem;
+    font-family: var(--fontPrincipal);
+    color: var(--corBackground);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contato__formulario__campos::placeholder {
+    font-size: 0.9rem;
+}
+
+.contato__formulario__campos:focus {
+    border-color: var(--corSecundaria);
+}
+
+.contato__formulario__campos {
+    resize: none;
+}
+
+.contato__formulario__botao {
+    background-color: var(--corSecundaria);
+    color: var(--corPrincipal);
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--fontSecundaria);
+}
+
+.contato__formulario__botao:hover {
+    background-color: #003c99;
 }
