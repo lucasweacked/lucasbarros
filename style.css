@@ -240,14 +240,32 @@ body {
 }
 
 .projetos__conteudo__projetos__paragrafo a {
-    font-family: var(--fontPrincipal);
+    text-decoration: none;
+    font-family: var(--fontSecundaria);
     color: var(--corPrincipal);
-    font-size: 1.2rem;
-    text-decoration: underline;
+    font-size: 1.1rem;
+    font-weight: 400;
+    position: relative;
+}
+
+.projetos__conteudo__projetos__paragrafo a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--corSecundaria);
+    transition: width 0.3s ease;
+}
+
+.projetos__conteudo__projetos__paragrafo a:hover::after {
+    width: 100%;
 }
 
 .projetos__conteudo__projetos__paragrafo a:hover {
-    color: var(--corSecundaria);
+    text-decoration: none;
+    text-underline-offset: 0.8rem;
 }
 
 .contato {
@@ -347,4 +365,41 @@ body {
 
 .contato__formulario__botao:hover {
     background-color: #003c99;
+}
+
+.rodape {
+    padding: 2rem 1rem;
+}
+
+.rodape__conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rodape__creditos {
+    font-size: 1.2rem;
+    font-family: var(--fontPrincipal);
+    color: var(--corPrincipal);
+    margin-bottom: 1rem;
+}
+
+.rodape__conteudo__redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.rodape__conteudo__redes-sociais a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.rodape__conteudo__redes-sociais a:hover {
+    color: var(--corSecundaria);
+    /* Azul claro ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta o ícone */
 }
