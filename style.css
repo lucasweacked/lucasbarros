@@ -403,3 +403,62 @@ body {
     transform: scale(1.1);
     /* Aumenta o ícone */
 }
+
+@media (max-width: 1024px) {
+    .apresentacao {
+        padding: 6rem 5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .apresentacao__lado-esquerdo {
+        text-align: center;
+    }
+
+    .formacao,
+    .projetos,
+    .contato {
+        padding: 3rem;
+    }
+
+    .cabecalho__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+
+    .apresentacao__conteudo__paragrafo {
+        font-size: 1.1rem;
+    }
+
+    .formacao__conteudo__descricao__titulo,
+    .formacao__conteudo__cursos__titulo,
+    .formacao__conteudo__idiomas__titulo {
+        font-size: 1.2rem;
+    }
+
+    .formacao__conteudo__descricao__paragrafo,
+    .formacao__conteudo__cursos__cursos li,
+    .formacao__conteudo__idiomas li,
+    .projetos__conteudo__projetos__paragrafo,
+    .projetos__conteudo__projetos__tecnologias {
+        font-size: 1rem;
+    }
+
+    .contato__formulario__linha {
+        flex-direction: column;
+    }
+
+    .contato__formulario__campo,
+    .contato__formulario__mensagem textarea {
+        font-size: 1rem;
+    }
+
+    .contato__formulario__botao button {
+        font-size: 1rem;
+    }
+}
