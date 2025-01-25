@@ -5,6 +5,8 @@
 
     --corPrincipal: #f7f7f7;
     --corSecundaria: #0052cc;
+    --corAzul: #154284;
+    --corNSEI: #D2FF72;
 
     --fontPrincipal: 'Montserrat', sans-serif;
     --fontSecundaria: 'Krona One', sans-serif;
@@ -132,10 +134,10 @@ body {
 .formacao__conteudo__descricao__titulo,
 .formacao__conteudo__cursos__titulo,
 .formacao__conteudo__idiomas__titulo {
-    font-family: var(--fontSecundaria);
-    color: var(--corPrincipal);
-    font-weight: 500;
+    font-family: var(--fontPrincipal);
     font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--corPrincipal);
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -192,6 +194,7 @@ body {
     font-family: var(--fontPrincipal);
     color: var(--corPrincipal);
     font-size: 1.3rem;
+    margin-bottom: 2rem;
 }
 
 .projetos__conteudo__introducao a {
@@ -224,48 +227,39 @@ body {
 }
 
 .projetos__conteudo__projetos {
-    font-family: var(--fontSecundaria);
-    color: var(--corPrincipal);
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    gap: 10px;
 }
 
-.projetos__conteudo__projetos__paragrafo,
-.projetos__conteudo__projetos__tecnologias {
-    margin-top: 0.3rem;
+.projetos__conteudo__projetos__titulo {
     font-family: var(--fontPrincipal);
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--corPrincipal);
-    font-size: 1.2rem;
+}
+
+.projetos__conteudo__projetos__paragrafo {
+    font-family: var(--fontPrincipal);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--corPrincipal);
 }
 
 .projetos__conteudo__projetos__paragrafo a {
+    font-family: var(--fontPrincipal);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--corNSEI);
     text-decoration: none;
-    font-family: var(--fontSecundaria);
+}
+
+.projetos__conteudo__projetos__tecnologias {
+    font-family: var(--fontPrincipal);
+    font-size: 1.3rem;
+    font-weight: 500;
     color: var(--corPrincipal);
-    font-size: 1.1rem;
-    font-weight: 400;
-    position: relative;
-}
-
-.projetos__conteudo__projetos__paragrafo a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background-color: var(--corSecundaria);
-    transition: width 0.3s ease;
-}
-
-.projetos__conteudo__projetos__paragrafo a:hover::after {
-    width: 100%;
-}
-
-.projetos__conteudo__projetos__paragrafo a:hover {
-    text-decoration: none;
-    text-underline-offset: 0.8rem;
 }
 
 .contato {
@@ -400,4 +394,104 @@ body {
 .rodape__conteudo__redes-sociais a:hover {
     color: var(--corSecundaria);
     transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+    .apresentacao {
+        padding: 6rem 5rem;
+    }
+
+    .formacao,
+    .projetos,
+    .contato {
+        padding: 2rem 5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .apresentacao {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .apresentacao__conteudo {
+        text-align: center;
+        align-items: center;
+    }
+
+    .formacao__conteudo__titulo,
+    .projetos__conteudo__titulo,
+    .contato__conteudo__titulo {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 2rem 1rem;
+    }
+
+    .cabecalho__menu__link {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .apresentacao {
+        padding: 4rem 2rem;
+    }
+
+    .formacao,
+    .projetos,
+    .contato {
+        padding: 1rem 2rem;
+    }
+
+    .formacao__conteudo__descricao__paragrafo,
+    .projetos__conteudo__introducao,
+    .contato__conteudo__paragrafo {
+        font-size: 1rem;
+    }
+
+    .contato__formulario {
+        padding: 0 5%;
+    }
+
+    .contato__formulario__linha {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .apresentacao__imagem {
+        width: 100%;
+    }
+
+    .apresentacao {
+        padding: 2rem 1rem;
+    }
+
+    .formacao__conteudo__descricao__titulo,
+    .projetos__conteudo__projetos__titulo,
+    .contato__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+
+    .contato__formulario__campos {
+        font-size: 0.9rem;
+    }
+
+    .contato__formulario__botao {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
 }
