@@ -82,6 +82,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    place-items: center;
 }
 
 .apresentacao__conteudo {
@@ -89,6 +90,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    text-align: left;
 }
 
 .apresentacao__conteudo__titulo {
@@ -98,7 +100,7 @@ body {
     font-size: 2rem;
 }
 
-.apresentacao__conteudo__titulo span{
+.apresentacao__conteudo__titulo span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px var(--corPrincipal);
 }
@@ -111,11 +113,15 @@ body {
 }
 
 .apresentacao__imagem {
-    position: relative;
-    display: flex;
-    justify-content: center;
+    height: auto;
     border-radius: 5%;
     pointer-events: none;
+}
+
+.apresentacao__imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .formacao {
@@ -159,13 +165,32 @@ body {
 
 .formacao__conteudo__cursos__cursos li a {
     font-family: var(--fontPrincipal);
-    color: var(--corPrincipal);
+    color: #024CAA;
     font-size: 1.2rem;
-    text-decoration: underline;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.formacao__conteudo__cursos__cursos li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #01357A;
+    /* Tom mais escuro */
+    transition: width 0.3s ease;
 }
 
 .formacao__conteudo__cursos__cursos li a:hover {
-    color: var(--corSecundaria);
+    color: #01357A;
+    /* Tom mais escuro */
+}
+
+.formacao__conteudo__cursos__cursos li a:hover::after {
+    width: 100%;
 }
 
 .formacao__conteudo__idiomas li {
@@ -200,7 +225,7 @@ body {
 .projetos__conteudo__introducao a {
     text-decoration: none;
     font-family: var(--fontSecundaria);
-    color: var(--corSecundaria);
+    color: #578E7E;
     font-size: 1.1rem;
     font-weight: 500;
     position: relative;
@@ -213,7 +238,7 @@ body {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background-color: var(--corSecundaria);
+    background-color: #578E7E;
     transition: width 0.3s ease;
 }
 
@@ -237,7 +262,7 @@ body {
     font-family: var(--fontPrincipal);
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--corPrincipal);
+    color: #578E7E;
 }
 
 .projetos__conteudo__projetos__paragrafo {
@@ -250,9 +275,30 @@ body {
 .projetos__conteudo__projetos__paragrafo a {
     font-family: var(--fontPrincipal);
     font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--corNSEI);
+    font-weight: bold;
+    color: #41665C;
     text-decoration: none;
+    position: relative;
+}
+
+.projetos__conteudo__projetos__paragrafo a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #41665C;
+    transition: width 0.3s ease;
+}
+
+.projetos__conteudo__projetos__paragrafo a:hover::after {
+    width: 100%;
+}
+
+.projetos__conteudo__projetos__paragrafo a:hover {
+    text-decoration: none;
+    text-underline-offset: 0.8rem;
 }
 
 .projetos__conteudo__projetos__tecnologias {
