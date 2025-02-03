@@ -23,7 +23,8 @@ fetch('cursos.json')
     });
   })
   .catch(error => {
-    console.error('Erro ao carregar os dados:', error);
+  console.error('Erro ao carregar os dados:', error);
+  listaCursos.innerHTML = "<li>Erro ao carregar os cursos. Tente novamente mais tarde.</li>";
   });
 
 //Script de scroll inspirado por ASMR Prog (https://www.youtube.com/@AsmrProg)
