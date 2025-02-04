@@ -27,7 +27,7 @@ fetch('cursos.json')
   listaCursos.innerHTML = "<li>Erro ao carregar os cursos. Tente novamente mais tarde.</li>";
   });
 
-//Script de scroll inspirado por ASMR Prog (https://www.youtube.com/@AsmrProg)
+// Script de scroll inspirado por ASMR Prog (https://www.youtube.com/@AsmrProg)
 function scrollToElement(elementSelector, instance = 0) {
     const elements = document.querySelectorAll(elementSelector);
     if (elements.length > instance) {
@@ -51,7 +51,7 @@ link3.addEventListener('click', () => {
     scrollToElement('.contato');
 });
 
-// script de envio do formulário para o email 
+// Script de envio do formulário para o E-Mail 
 class FormSubmit {
     constructor(settings) {
         this.settings = settings;
@@ -68,7 +68,7 @@ class FormSubmit {
         this.formButton.innerText = "Enviado com sucesso!";
         this.formButton.disabled = false;
 
-        // retorna para o texto original "enviar" após 3 segundos
+        // Retorna para o texto original "enviar" após 3 segundos
         setTimeout(() => {
             this.formButton.innerText = "Enviar";
         }, 3000);
@@ -78,7 +78,7 @@ class FormSubmit {
         this.formButton.innerText = "Erro, tente novamente";
         this.formButton.disabled = false;
 
-        // retorna para o texto original "enviar" após 3 segundos
+        // Retorna para o texto original "enviar" após 3 segundos
         setTimeout(() => {
             this.formButton.innerText = "Enviar";
         }, 3000);
@@ -97,7 +97,7 @@ class FormSubmit {
         event.preventDefault();
         this.formButton.disabled = true;
         
-        // inicia a animação do botão "enviando..."
+        // Inícia a animação do botão "enviando..."
         let dots = 0;
         this.formButton.innerText = "Enviando";
         this.animationInterval = setInterval(() => {
@@ -117,10 +117,10 @@ class FormSubmit {
                 },
                 body: JSON.stringify(this.getFormObject()),
             });
-            clearInterval(this.animationInterval); // para a animação
+            clearInterval(this.animationInterval); // Para a animação
             this.displaySuccess();
         } catch (error) {
-            clearInterval(this.animationInterval); // para a animação em caso de erro
+            clearInterval(this.animationInterval); // Para a animação em caso de erro
             this.displayError();
             throw new Error(error);
         }
@@ -132,9 +132,12 @@ class FormSubmit {
     }
 }
 
-// inicialização do FormSubmit
+// Inicialização do FormSubmit
 const formSubmit = new FormSubmit({
     form: "[data-form]",
     button: "[data-button]",
 });
 formSubmit.init();
+
+// Script para pegar o ano atual para o footer
+document.getElementById('ano-atual').textContent = new Date().getFullYear();
