@@ -51,6 +51,17 @@ link3.addEventListener('click', () => {
     scrollToElement('.contato');
 });
 
+// Script menu
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".cabecalho__menu");
+
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("ativo");
+        menuToggle.classList.toggle("ativo");
+    });
+});
+
 // Script de envio do formulário para o E-Mail 
 class FormSubmit {
     constructor(settings) {

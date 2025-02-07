@@ -20,8 +20,10 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background-color: var(--corBackground);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .cabecalho {
@@ -30,6 +32,26 @@ body {
     align-items: center;
     width: 100%;
     padding: 3rem 1rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+
+/* Linhas do botão hambúrguer */
+.menu-bar {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
 .cabecalho__menu {
@@ -442,32 +464,96 @@ body {
     transform: scale(1.1);
 }
 
+/* Responsividade */
 @media (max-width: 1200px) {
     .apresentacao {
-        padding: 6rem 5rem;
+        padding: 8rem 5rem;
     }
 
     .formacao,
-    .projetos,
-    .contato {
-        padding: 2rem 5rem;
+    .projetos {
+        padding: 3rem 5rem;
     }
 }
 
 @media (max-width: 992px) {
-    .cabecalho__menu {
+    .apresentacao {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 6rem 3rem;
+    }
+
+    .apresentacao__imagem {
+        max-width: 80%;
+    }
+
+    .formacao,
+    .projetos {
+        padding: 3rem 3rem;
+    }
+
+    .contato__formulario {
+        padding: 0% 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
         flex-direction: column;
-        gap: 1rem;
+    }
+
+    .cabecalho__menu {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 30%;
+        height: 100%;
+        background-color: #0052cc;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+    }
+
+    .cabecalho__menu.ativo {
+        left: 0;
+    }
+
+    /* Animação do botão hambúrguer virando um "X" */
+    .menu-toggle.ativo .menu-bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.ativo .menu-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.ativo .menu-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .cabecalho__menu__link {
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .apresentacao {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        padding: 4rem 2rem;
     }
 
-    .apresentacao__conteudo {
-        text-align: center;
-        align-items: center;
+    .apresentacao__conteudo__titulo {
+        font-size: 1.8rem;
+    }
+
+    .apresentacao__conteudo__paragrafo {
+        font-size: 1.3rem;
+    }
+
+    .formacao,
+    .projetos {
+        padding: 2rem 2rem;
     }
 
     .formacao__conteudo__titulo,
@@ -475,36 +561,9 @@ body {
     .contato__conteudo__titulo {
         font-size: 1.8rem;
     }
-}
-
-@media (max-width: 768px) {
-    .cabecalho {
-        padding: 2rem 1rem;
-    }
-
-    .cabecalho__menu__link {
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .apresentacao {
-        padding: 4rem 2rem;
-    }
-
-    .formacao,
-    .projetos,
-    .contato {
-        padding: 1rem 2rem;
-    }
-
-    .formacao__conteudo__descricao__paragrafo,
-    .projetos__conteudo__introducao,
-    .contato__conteudo__paragrafo {
-        font-size: 1rem;
-    }
 
     .contato__formulario {
-        padding: 0 5%;
+        padding: 0% 2%;
     }
 
     .contato__formulario__linha {
@@ -514,30 +573,60 @@ body {
 }
 
 @media (max-width: 576px) {
-    .cabecalho {
+    .cabecalho__menu {
         flex-direction: column;
+        gap: 1rem;
     }
 
-    .apresentacao__imagem {
-        width: 100%;
+    .cabecalho__menu__link {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .apresentacao {
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
 
-    .formacao__conteudo__descricao__titulo,
-    .projetos__conteudo__projetos__titulo,
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+
+    .apresentacao__conteudo__paragrafo {
+        font-size: 1.1rem;
+    }
+
+    .formacao,
+    .projetos {
+        padding: 1.5rem 1rem;
+    }
+
+    .formacao__conteudo__titulo,
+    .projetos__conteudo__titulo,
     .contato__conteudo__titulo {
         font-size: 1.5rem;
     }
 
-    .contato__formulario__campos {
-        font-size: 0.9rem;
+    .formacao__conteudo__descricao__paragrafo,
+    .formacao__conteudo__cursos__cursos li,
+    .formacao__conteudo__idiomas li {
+        font-size: 1rem;
     }
 
-    .contato__formulario__botao {
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
+    .projetos__conteudo__introducao,
+    .projetos__conteudo__projetos__paragrafo,
+    .projetos__conteudo__projetos__tecnologias {
+        font-size: 1.1rem;
+    }
+
+    .contato__formulario {
+        padding: 0% 1%;
+    }
+
+    .rodape__creditos {
+        font-size: 1rem;
+    }
+
+    .rodape__conteudo__redes-sociais a {
+        font-size: 1.2rem;
     }
 }
