@@ -51,7 +51,7 @@ link3.addEventListener('click', () => {
     scrollToElement('.contato');
 });
 
-// Script menu
+// Script de menu 'hamburger'
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".cabecalho__menu");
